@@ -27,12 +27,12 @@ START_IMAGE = "https://te.legra.ph/file/119729ea3cdce4fefb6a1.jpg"
 # RICH_SLIDESHOW_IMAGES=URL1|URL2|...|URL6. Telegram renders them as a native
 # swipeable rich-message slideshow.
 DEFAULT_SLIDES = [
-    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=85",
-    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1400&q=85",
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=85",
-    "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&q=85",
-    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1400&q=85",
-    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400&q=85",
+    "https://te.legra.ph/file/119729ea3cdce4fefb6a1.jpg",
+    "https://te.legra.ph/file/119729ea3cdce4fefb6a1.jpg",
+    "https://te.legra.ph/file/119729ea3cdce4fefb6a1.jpg",
+    "https://te.legra.ph/file/119729ea3cdce4fefb6a1.jpg",
+    "https://te.legra.ph/file/119729ea3cdce4fefb6a1.jpg",
+    "https://te.legra.ph/file/119729ea3cdce4fefb6a1.jpg",
 ]
 SLIDES = (RICH_SLIDESHOW_IMAGES[:6] if RICH_SLIDESHOW_IMAGES else DEFAULT_SLIDES)
 if len(SLIDES) < 5:
@@ -41,7 +41,7 @@ if len(SLIDES) < 5:
 
 def start_keyboard(username):
     """Fallback only. The normal UI uses native Rich Message buttons."""
-    username = (username or "VJJoinRequestBot").lstrip("@")
+    username = (username or "RequestApprovalBot").lstrip("@")
     return InlineKeyboardMarkup([
         [
             InlineKeyboardButton("➕ Add To Channel", url=f"https://t.me/{username}?startchannel=true"),
